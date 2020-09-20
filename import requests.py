@@ -13,7 +13,7 @@ for line in rdr:
     if index > 1 :
         if(line[3] != 'CCTV') :
             place = line[2]
-            url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + place +'&inputtype=textquery&fields=geometry,formatted_address&locationbias=circle:20000@35.2275496,128.6810085&key=AIzaSyDXwvMn4rRZ7e8yKR-gykRiO6dYQPJpOmU'
+            url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + place +'&inputtype=textquery&fields=geometry,formatted_address&locationbias=circle:20000@35.2275496,128.6810085&key=YOUR_KEY_HEAR'
             response = requests.get(url)
             json_response = json.loads(response.text)
             if (json_response['status'] == 'OK') :
