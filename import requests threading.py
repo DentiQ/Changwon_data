@@ -26,7 +26,7 @@ for line in rdr:
     index+=1
     if index > 1 :
         place = line[2]
-        url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + place +'&inputtype=textquery&fields=geometry,formatted_address&locationbias=circle:20000@35.2275496,128.6810085&key=AIzaSyDXwvMn4rRZ7e8yKR-gykRiO6dYQPJpOmU'
+        url = 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' + place +'&inputtype=textquery&fields=geometry,formatted_address&locationbias=circle:20000@35.2275496,128.6810085&key=YOUR_KEY_HEAR'
         t1 = threading.Thread(target=append_line, args=(url, lines, line))
         t1.start()
 f.close
